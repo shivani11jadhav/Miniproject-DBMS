@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/web/index.html</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/DBConnection.java</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/web/register.jsp</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/RegisterServlet.java</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/LoginServlet.java</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/DashboardServlet.java</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/web/dashboard.jsp</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/SubmitIdeaServlet.java</file>
+            <file>file:/C:/Users/Fujitsu/Documents/NetBeansProjects/Crowdsourced_Idea_Management/src/java/ff/VoteServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
