@@ -34,7 +34,7 @@ public class VoteServlet extends HttpServlet {
                 psCheck.setInt(2, ideaId);
                 ResultSet rs = psCheck.executeQuery();
 
-                if (!rs.next()) {
+               /* if (!rs.next()) {
                     // 2. Agar entry NAHI mili, matlab pehla vote hai. Entry dalo!
                     String insertSql = "INSERT INTO votes (user_id, idea_id) VALUES (?, ?)";
                     PreparedStatement psInsert = con.prepareStatement(insertSql);
@@ -47,7 +47,29 @@ public class VoteServlet extends HttpServlet {
                     PreparedStatement psUpdate = con.prepareStatement(updateSql);
                     psUpdate.setInt(1, ideaId);
                     psUpdate.executeUpdate();
+                }*/
+               // ... baaki code upar ka same rahega ...
+
+                if (!rs.next()) {
+                    // 2. Agar entry NAHI mili, matlab pehla vote hai. Entry dalo!
+                    // Ye INSERT statement hi tumhare MySQL Trigger ko fire (activate) karega
+                    String insertSql = "INSERT INTO votes (user_id, idea_id) VALUES (?, ?)";
+                    PreparedStatement psInsert = con.prepareStatement(insertSql);
+                    psInsert.setInt(1, userId);
+                    psInsert.setInt(2, ideaId);
+                    psInsert.executeUpdate();
+
+                    /* 3. ISNE AB ZARURAT NAHI HAI (TRIGGER HANDLE KAREGA)
+                       Tumne terminal mein jo Trigger banaya hai woh is INSERT ke hote hi
+                       apne aap ideas table ka count badha dega.
+                    
+                    String updateSql = "UPDATE ideas SET votes = votes + 1 WHERE id = ?";
+                    PreparedStatement psUpdate = con.prepareStatement(updateSql);
+                    psUpdate.setInt(1, ideaId);
+                    psUpdate.executeUpdate();
+                    */
                 }
+// ... baaki code niche ka same rahega ...
                 // Agar pehle se vote kiya hai, toh bina kuch kiye seedha dashboard par bhej do
                 response.sendRedirect("DashboardServlet");
 
